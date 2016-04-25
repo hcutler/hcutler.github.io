@@ -112,10 +112,11 @@
     <h4><b>How  we aggregate our data to answer questions?</b></h4>
     <br>
     <i>We do quality control on the answers by doing feature extraction on the questions themselves
-		and submitted answers. We use the sklearn.feature_extraction module, and only the FIVE "most relevant"
+		and submitted answers. We use the <a href="sklearn.feature_extraction">sklearn.feature_extraction module</a>, and only the FIVE "most relevant"
 		answers are considered. For each question, we post two subsequent HITs: (1) where we list the "most relevant" answers associated
 		with the question and ask the crowd to rate the responses in order and (2) where we list all the answers associated with
-		question and ask the crowd to PICK five in order of most to least relevant."
+		question and ask the crowd to PICK five in order of most to least relevant. And we can compare the two to see if they're different
+		or the same so we're effectively testing the accuracy of the module against the judgment of the crowd.
 		</i>
     <br>
   </div>
