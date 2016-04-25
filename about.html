@@ -95,15 +95,28 @@
   <div class="signup-box">
     <h4><b>What is Dr. Turk?</b></h4>
     <br>
-    <i>Insert answer</i>
-    <br>
+    <i>Doctor Turk	Dr. Turk is a crowd sourced advice column - people can post questions to
+			the web platform and the question is outsourced to mechanical turk, where the crowd produces
+			and votes on advice. The best answer produced by the crowd is then sent back to the person who
+			asked the question via e-mail.
+		</i>
+
+		<br>
     <h4><b>How we generate HITs?</b></h4>
     <br>
-    <i>Insert answer</i>
+    <i>eople can post to "Submit question" tab of the website. They can post about advice
+			they need or question they are seeking an answer to. We post the questions directly as HITs to
+			MTurk.  Once questions are answered, we post an additional round of HITs where we ask the crowd
+			to rate the quality of responses.</i>
     <br>
     <h4><b>How  we aggregate our data to answer questions?</b></h4>
     <br>
-    <i>Insert answer</i>
+    <i>We do quality control on the answers by doing feature extraction on the questions themselves
+		and submitted answers. We use the sklearn.feature_extraction module, and only the FIVE "most relevant"
+		answers are considered. For each question, we post two subsequent HITs: (1) where we list the "most relevant" answers associated
+		with the question and ask the crowd to rate the responses in order and (2) where we list all the answers associated with
+		question and ask the crowd to PICK five in order of most to least relevant."
+		</i>
     <br>
   </div>
 
