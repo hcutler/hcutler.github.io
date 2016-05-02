@@ -8,7 +8,94 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,300' rel='stylesheet' type='text/css'>
 
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<!--PIE CHART CODE -->
+	    <script type="text/javascript">
+	      google.charts.load('current', {'packages':['corechart']});
+	      google.charts.setOnLoadCallback(drawChart);
+	      function drawChart() {
+	        var data = google.visualization.arrayToDataTable([
+	          ['Amount Paid Per Response', 'Number Of Best Responses'],
+	          ['5 cents',     17],
+	          ['10 cents',      20],
+	          ['20 cents',  10],
+	          ['Unpaid Crowd', 5],
+	        ]);
+	        var options = {
+	          title: 'Number of Best Responses for Doctor Turk by Payment'
+	        };
+	        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+	        chart.draw(data, options);
+	      };
+				</script>
+
+<script type="text/javascript">
+     google.charts.load('current', {'packages': ['geochart']});
+     google.charts.setOnLoadCallback(drawMarkersMap);
+      function drawMarkersMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Country','Total Responses','Best Responses'],
+        ['Argentina',10,0],
+        ['Bangladesh',4,1],
+        ['Bosnia and Herzegovina',13,2],
+        ['Bazil',51,3],
+        ['Canada',9,0],
+        ['China',2,0],
+        ['Colombia',12,4],
+        ['Germany',2,0],
+        ['Egypt',11,0],
+        ['Spain',9,1],
+        ['Greece',1,0],
+        ['Croatia',4,0],
+        ['Hungary',1,0],
+        ['Indonesia',11,0],
+        ['India',17,4],
+        ['Italy',5,0],
+        ['Australia',7,0],
+        ['Mexico',6,0],
+        ['Macedonia',12,3],
+        ['Mongolia',2,1],
+        ['Malaysia',6,2],
+        ['Nepal',14,1],
+        ['Pakistan',1,2],
+        ['Peru',7,0],
+        ['Phillippines',34,0],
+        ['Portugal',8,2],
+        ['Russia',2,0],
+        ['Serbia',29,5],
+        ['Sweden',1,0],
+        ['Turkey',18,0],
+        ['Taiwan',2,1],
+        ['Ukraine',1,1],
+        ['United States of America',37,2],
+        ['Venezuela',97,9],
+        ['Vietnam',22,3]
+      ]);
+      var options = {
+        displayMode: 'markers',
+        'title': 'Responses',
+        colorAxis: {colors: ['blue', 'orange']}
+      };
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    };
+    </script>
+
+
 		<style type="text/css">
+		h3 {
+			text-align: center;
+		}
+
+		h4 {
+			text-align: center;
+		}
+
+
+
+
 		body {
 			/*font-family: 'Raleway', sans-serif;*/
 			font-family: 'Josefin Sans', sans-serif;
@@ -23,22 +110,9 @@
 			color: white;
 			max-width: 330px;
 			margin: 0 auto;
+			padding-left: 200px;
 		}
 
-		.signup-box {
-			max-width: 330px;
-			margin: 0 auto;
-			background-color: #ffffff;
-			border-size:1px;
-			/*border-style:ridge;*/
-			/*border-color: #e5e5ff;*/
-			border-radius: 25px;
-			padding: 20px 20px 20px 20px;
-		}
-
-	.signup-box .form-control {
-		margin-bottom: 10px;
-	}
 
 	.footer {
 		/*background-color: none;*/
@@ -94,16 +168,55 @@
 
   <h1 style="text-align:center">Our analysis for the project:</h1>
 	<br>
+
+	<h3>
+			Doctor Turk is unique because we provide financial incentives to workers
+			by paying them to answer questions.  Our motivation behind this was that
+			it would motivate workers to answer questions and provide more comprehensive responses.
+
+	</h3>
 	<br>
-<div class="signup-box">
+	<h4>
+		We initially set out to test the effects of pay grade and geography.
+	</h4>
+	<br>
 
-</div>
+	<h4>
+		Using all of our question/answers and answer ranking data, we generated the following <b>pie chart:</b>
+	</h4>
 
-<div class="signup-box">
+	<center>
+		<div id="piechart" style="width: 900px; height: 500px; align:center"></div>
+	</center>
 
-</div>
+	<br>
 
 
+	<h4>
+		The chart shows two main things:
+		<br>
+		1. That the crowd is in fact better at answering questions than a single person
+		<br>
+		2. Monetary incentive was not a predictor in the quality of the answer.
+	</h4>
+	<br>
+
+
+	<hr>
+
+<!-- MAP STUFF -->
+
+	<h3>
+		We also generated a <b>map</b> showing the geographic distribution of workers on Crowdflower who answered the various questions we posted.
+	</h3>
+
+	<center>
+		<div id="chart_div" style="width: 900px; height: 500px;align:center"></div>
+	</center>
+	<br>
+
+
+	<hr>
     <!-- <h4><b>Question 1: </b>
 			I dont know what to major in. I like computer science, but it's really hard and I'm not so good at it. I am, however, really strong in writing and analytical thinking.
 		</h4>
