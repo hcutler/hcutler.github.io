@@ -11,8 +11,10 @@
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
-<!--PIE CHART CODE -->
+
 	    <script type="text/javascript">
+
+			//PIE CHART
 	      google.charts.load('current', {'packages':['corechart']});
 	      google.charts.setOnLoadCallback(drawChart);
 	      function drawChart() {
@@ -24,63 +26,88 @@
 	          ['Unpaid Crowd', 5],
 	        ]);
 	        var options = {
-	          title: 'Number of Best Responses for Doctor Turk by Payment'
+	          title: 'Number of Best Responses for Doctor Turk by Payment',
+						width:700,
+						height:500
 	        };
-	        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+					var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 	        chart.draw(data, options);
 	      };
-				</script>
 
-<script type="text/javascript">
-     google.charts.load('current', {'packages': ['geochart']});
-     google.charts.setOnLoadCallback(drawMarkersMap);
-      function drawMarkersMap() {
-      var data = google.visualization.arrayToDataTable([
-        ['Country','Total Responses','Best Responses'],
-        ['Argentina',10,0],
-        ['Bangladesh',4,1],
-        ['Bosnia and Herzegovina',13,2],
-        ['Bazil',51,3],
-        ['Canada',9,0],
-        ['China',2,0],
-        ['Colombia',12,4],
-        ['Germany',2,0],
-        ['Egypt',11,0],
-        ['Spain',9,1],
-        ['Greece',1,0],
-        ['Croatia',4,0],
-        ['Hungary',1,0],
-        ['Indonesia',11,0],
-        ['India',17,4],
-        ['Italy',5,0],
-        ['Australia',7,0],
-        ['Mexico',6,0],
-        ['Macedonia',12,3],
-        ['Mongolia',2,1],
-        ['Malaysia',6,2],
-        ['Nepal',14,1],
-        ['Pakistan',1,2],
-        ['Peru',7,0],
-        ['Phillippines',34,0],
-        ['Portugal',8,2],
-        ['Russia',2,0],
-        ['Serbia',29,5],
-        ['Sweden',1,0],
-        ['Turkey',18,0],
-        ['Taiwan',2,1],
-        ['Ukraine',1,1],
-        ['United States of America',37,2],
-        ['Venezuela',97,9],
-        ['Vietnam',22,3]
-      ]);
-      var options = {
-        displayMode: 'markers',
-        'title': 'Responses',
-        colorAxis: {colors: ['blue', 'orange']}
-      };
-      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    };
+		// MAP
+		google.charts.load('current2', {'packages': ['geochart']});
+	 	google.charts.setOnLoadCallback(drawMarkersMap);
+		function drawMarkersMap() {
+		var data = google.visualization.arrayToDataTable([
+			['Country','Best / Total Responses'],
+			['Argentina',0],
+			['Bangladesh',.25],
+			['Bosnia and Herzegovina',0.153846153846],
+			['Bazil',0.0588235294118],
+			['Canada',0],
+			['China',0],
+			['Colombia',.333333333],
+			['Germany',0],
+			['Egypt',0],
+			['Spain',.1111111],
+			['Greece',0],
+			['Croatia',0],
+			['Hungary',0],
+			['Indonesia',0],
+			['India',0.235294117647],
+			['Italy',0],
+			['Australia',0],
+			['Mexico',0],
+			['Macedonia',0.25],
+			['Mongolia',0.5],
+			['Malaysia',0.333333333333],
+			['Nepal',0.0714285714286],
+			['Pakistan',1],
+			['Peru',0],
+			['Phillippines',0],
+			['Portugal',0.25],
+			['Russia',0],
+			['Serbia',0.172413793103],
+			['Sweden',0],
+			['Turkey',0],
+			['Taiwan',0.5],
+			['Ukraine',1],
+			['United States of America',0.0540540540541],
+			['Venezuela',0.0927835051546],
+			['Vietnam',0.136363636364]
+		]);
+		var options = {
+			//displayMode: 'markers',
+			'title': 'Responses',
+			//colorAxis: {colors: ['blue']}
+		};
+		var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+		chart.draw(data, options);
+	};
+
+	//satisfaction
+	google.charts.load('current3', {'packages':['corechart']});
+
+google.charts.setOnLoadCallback(drawChart2);
+function drawChart2() {
+	var data = google.visualization.arrayToDataTable([
+		['Satisfaction', 'Quantity'],
+		['1 (Very satisfied)',     4],
+		['2',      5],
+		['3',  4],
+		['4', 1],
+		['5 (Not so satisfied)', 1],
+	]);
+	var options = {
+		title: 'How satisfied are you with the crowd\'s best generated answer?'
+	};
+	var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+	chart.draw(data, options);
+};
+
+
+
     </script>
 
 
@@ -112,6 +139,35 @@
 			margin: 0 auto;
 			padding-left: 200px;
 		}
+
+		.signup-box {
+			max-width: 800px;
+			margin: 0 auto;
+			background-color: #ffffff;
+			border-size:1px;
+			/*border-style:ridge;*/
+			/*border-color: #e5e5ff;*/
+			border-radius: 25px;
+			padding: 20px 20px 20px 20px;
+
+		}
+
+		.sample {
+			border-style: solid;
+			background-color: #ffffff;
+			border-size:1px;
+			/*width: 100%;*/
+			margin:auto;
+	 		right: 0px;
+	 		width: 1200px;
+			float: left:
+			position: absolute;
+		}
+
+
+	.signup-box .form-control {
+		margin-bottom: 10px;
+	}
 
 
 	.footer {
@@ -154,8 +210,8 @@
 		<ul>
 			<div class="navbar-left" style="position:relative;left:10px">
 				<!-- style="pull-left; pull-right" -->
-				<li><a href="submit.html">Submit a question</a></li>
-				<li><a href="results.html">View results <span class="glyphicon glyphicon-list"></span></a></li>
+				<li><a href="submit.html">Submit a question!</a></li>
+				<li><a href="results.html">Results/Analysis <span class="glyphicon glyphicon-list"></span></a></li>
 				<!-- <li><a href="/resources">Resources<span class="glyphicon glyphicon-list"></span></a></li> -->
         <li><a href="about.html">What is Dr. Turk?</a></li>
 				<li><a href="index.html">Homepage</a></li>
@@ -165,25 +221,58 @@
 	</nav>
 
 	<br>
+<br>
+<br>
+<b><h1 style="text-align:center">Here is a sampling of the results our Q/A pipeline:</h1></b>
+<div class="sample">
 
-  <h1 style="text-align:center">Our analysis for the project:</h1>
-	<br>
+	<h4>
+		<b><font color="blue">Question: </font><i>What is the meaning of life?</i></b><br><br>
+		<b><font color="green">Best rated answer: </font></b><br>	Meaning of life is (at least for me) to see your friends everyday,to enjoy what you have(and believe me I don't have a lot),just being a good person is good feeling, not having any load on your back( dirty bussines),just having a blast of life with your friends and just being fulfilled with passion,friendship, positive enegry and karma, everything you do good, you will get better twice, so don't ask yourself(or us) that questions, you live once and you should live like you mean it.
+			<br>
+			<hr>
+			<br>
+		<b><font color="blue">Question: </font><i>When was the first TV invented?</i></b><br><br>
+			<b><font color="green">Best rated answer: </font></b><br>The earliest version of the CRT was invented by the German physicist Ferdinand Braun in 1897 and is also known as the "Braun" tube It was a cold-cathode diode, a modification of the Crookes tube, with a phosphor-coated screen. In 1907, Russian scientist Boris Rosing used a CRT in the receiving end of an experimental video signal to form a picture. He managed to display simple geometric shapes onto the screen, which marked the first time that CRT technology was used for what is now known as television.
+		<br>
+		<hr>
+		<br>
+		<b><font color="blue">Question: </font><i>I'm looking to get into doing some meditation. What's the best way to go about this? Are there programs or apps that I could use? Anything to watch out for?</i></b><br><br>
+			<b><font color="green">Best rated answer: </font></b><br>Whether you sit on a chair or cross-legged on the floor, make sure that your spine is upright with head up. If you are slumped your mind will drift. Mind and body are intertwined. If your body is well-balanced, your mind will also be in balance. To straighten up, imagine that your head is touching the sky. Paying attention to the breath is a great way to anchor yourself in the present moment.
+		<br>
+		<hr>
+		<br>
+		<b><font color="blue">Question: </font><i>What are the best countries to travel to in East Asia as someone in his early 20's looking to travel with a group of friends?</i></b><br><br>
+			<b><font color="green">Best rated answer: </font></b><br>I think the best country to travel to is Jordan. It's spectacular city of Petra is the most visited tourist destination in the world and not to be missed.As the country itself sits on 7 mountains every ride is a roller coaster,plenty of old attractions as well as new to see,deserts where they can hore eeps and go for crazy rides,exotic dancing in the evenings with special packages. Traditional arabic food is found everywhere as long as age old markets.people are very friendly and the dead sea isnt very far either ,i am sure floating in this magical sea will leave endless memories,yes Jordan is a great country to visit no doubt,i have been there myself and can vouch for the brilliant time i had there!"
+			<br>
+			<hr>
+			<br>
+		<b><font color="blue">Question: </font><i>How do different companies view a low GPA if you are an engineer vs. another major?</i></b><br><br>
+			<b><font color="green">Best rated answer: </font></b> <br>A high GPA may lead you to the door, but that does not necessarily mean you get the job. There are other factors like skills,qualities & experience that matter. Creativity, interpersonal skills, critical thinking, and communication ability are also a major factor that just you GPA. So a low GPA does not really matter. Leadership, special projects, related work, or internship experience is also a factor in your job profile.
+			<br>
+		</h4>
+
+</div>
+<br>
+<br>
+<br>
+<hr>
+<br>
+  <b><h1 style="text-align:center">Our analysis for the project:</h1></b>
 
 	<h3>
-			Doctor Turk is unique because we provide financial incentives to workers
-			by paying them to answer questions.  Our motivation behind this was that
-			it would motivate workers to answer questions and provide more comprehensive responses.
+			Doctor Turk is unique because we provide financial incentives to workers by paying them to answer questions.<br>
+			Our motivation behind this was that it would motivate workers to answer questions and provide more comprehensive responses.<br>
+			We initially set out to test the effects of <font color="red">pay grade</font> and <font color="red">geography</font>.
 
 	</h3>
 	<br>
-	<h4>
-		We initially set out to test the effects of pay grade and geography.
-	</h4>
+
 	<br>
 
-	<h4>
-		Using all of our question/answers and answer ranking data, we generated the following <b>pie chart:</b>
-	</h4>
+	<h3>
+		Using all of our question/answers and answer ranking data, we generated the following <u><b>pie chart:</b></u>
+	</h3>
 
 	<center>
 		<div id="piechart" style="width: 900px; height: 500px; align:center"></div>
@@ -192,22 +281,24 @@
 	<br>
 
 
-	<h4>
+	<h3>
 		The chart shows two main things:
 		<br>
 		1. That the crowd is in fact better at answering questions than a single person
 		<br>
 		2. Monetary incentive was not a predictor in the quality of the answer.
-	</h4>
+	</h3>
 	<br>
 
-
+	<br>
+	<br>
 	<hr>
+
 
 <!-- MAP STUFF -->
 
 	<h3>
-		We also generated a <b>map</b> showing the geographic distribution of workers on Crowdflower who answered the various questions we posted.
+		We also generated a <u><b>map</b></u> showing the geographic distribution of workers on Crowdflower who answered the various questions we posted.
 	</h3>
 
 	<center>
@@ -215,31 +306,27 @@
 	</center>
 	<br>
 
-
+<h3>
+	An analysis comparing number of best responses by amount paid per worker shows that overall, paying workers results in better answers.
+</h3>
+<br>
 	<hr>
-    <!-- <h4><b>Question 1: </b>
-			I dont know what to major in. I like computer science, but it's really hard and I'm not so good at it. I am, however, really strong in writing and analytical thinking.
-		</h4>
+	<br>
+	<br>
 
-		<br>
-		<h4><b>Answers</b> <i>(ranked best (1) to worst (5))</i></h4>
-			<br>
-		<ol>
-			<li>Study the history of science and technology. You'll learn the basics of computer science through the lense of its historical development, and your assignments will be mostly papers and historical analyses as opposed to coding. </li>
-			<li>Do computer science. You will literally get any job ever after college because the world is in need of coders. </li>
-			<li>It depends what you want to do after college </li>
-			<li>computer science. </li>
-			<li>Double major in computer science and english</li>
-		</ol> -->
-    <br>
+	<h3>
+		We also generated a <u><b>chart</b></u> showing people's reported satisfaction with the answers they received in response to their questions.
+	</h3>
+	<br>
 
 
+	<center>
+		<div id="piechart2" style="width: 900px; height: 500px;"></div>
+	</center>
+	<br>
 
-    <!-- <button type="button" class="btn btn-secondary">Ask a question...</button>
-    <button type="button" class="btn btn-secondary">View answers</button> -->
-
-  <!-- </div> -->
-
+<br>
+<br>
 
 
 
@@ -256,14 +343,7 @@
 	<br>
 
 	<br>
-	<!-- <div class="footer">
-		<ul class="nav navbar-nav navbar-right" style="position:relative;right:15px">
-			<li><a href="#"><img src="/facebook.png" style="height:20px;width:20px;position:relative;left:5px;top:0px;bottom:10px;right:10px"></a></li>
-			<li><a href="#"><img src="/twitter.png" style="height:20px;width:24px;position:relative;left:5px;top:0px;bottom:10px;right:10px"></a></li>
-			<li><a href="#"><img src="/linkedin.png" style="height:20px;width:20px;position:relative;left:5px;top:0px;bottom:10px;right:10px"></a></li>
-			<li><a href="hcutler@seas.upenn.edu"><img src="/envelope.png" style="height:20px;width:20px;position:relative;left:5px;top:0px;bottom:10px;right:10px"></a></li>
-		</ul>
-	</div> -->
+
 
 </body>
 </html>
