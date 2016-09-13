@@ -295,6 +295,64 @@ section.features .feature-item i {
     max-width: none;
   }
 }
+
+///
+section.profile .section-heading {
+  margin-bottom: 100px;
+}
+section.profile .section-heading h2 {
+  margin-top: 0;
+}
+section.profile .section-heading p {
+  margin-bottom: 0;
+}
+section.profile .device-container,
+section.profile .feature-item {
+  max-width: 300px;
+  margin: 0 auto;
+}
+section.profile .device-container {
+  margin-bottom: 100px;
+}
+@media (min-width: 992px) {
+  section.profile .device-container {
+    margin-bottom: 0;
+  }
+}
+section.profile .profile-item {
+  text-align: center;
+  margin-bottom: 100px;
+}
+section.profile .profile-item h3 {
+  font-size: 30px;
+}
+section.profile .profile-item i {
+  font-size: 80px;
+  background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: linear-gradient(to left, #7b4397, #dc2430);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (min-width: 992px) {
+  section.profile .device-container,
+  section.profile .profile-item {
+    max-width: none;
+  }
+}
+／／／／／
+
+
+
+
+
+
+
+
+
+
+
+
+
 section.cta {
   position: relative;
   -webkit-background-size: cover;
