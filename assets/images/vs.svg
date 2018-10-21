@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="323px" viewBox="0 0 40 323" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 22</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Website3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-page" transform="translate(-619.000000, -1536.000000)">
+            <g id="Group-22" transform="translate(619.000000, 1537.000000)">
+                <g id="Group-21">
+                    <text id="VS" font-family="Raleway-Medium, Raleway" font-size="32" font-weight="400" letter-spacing="0.5" fill="#B6BEC6">
+                        <tspan x="0.18" y="172">VS</tspan>
+                    </text>
+                    <path d="M21,0 L21,122" id="Line" stroke="#DCE0E4" stroke-width="2" stroke-linecap="round"></path>
+                    <path d="M23,199 L23,321" id="Line-Copy" stroke="#DCE0E4" stroke-width="2" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

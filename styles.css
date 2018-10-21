@@ -1,0 +1,657 @@
+body{
+  margin:0;
+  padding: 0;
+}
+#wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+/* TEXT STYLES */
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin: 0;
+  color: #4A4E52;
+  line-height: 60px;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1.2;
+	color: #4A4E52;
+  letter-spacing: .5px;
+  margin-top: 0;
+}
+
+h3 {
+  margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.7;
+	color: #4a4a4a;
+  letter-spacing: .5px;
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #4a4a4a;
+  letter-spacing: .5px;
+  text-align: center;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  color: #4A4E52;
+  letter-spacing: .25px;
+  line-height: 25px;
+}
+
+/*Font stack for Pure Grid CSS*/
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: 'Raleway', sans-serif;
+}
+
+/*
+ * -- MENU STYLES --
+ * I want to customize how my .pure-menu looks at the top of the page
+ */
+
+.home-menu {
+    padding: 0.5em;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+}
+.home-menu {
+    background: white;
+}
+
+.pure-menu-link {}
+.pure-menu.pure-menu-fixed {
+    /* Fixed menus normally have a border at the bottom. */
+    border-bottom: none;
+    /* I need a higher z-index here because of the scroll-over effect. */
+    z-index: 4;
+}
+
+.home-menu .pure-menu-heading {
+    color: white;
+    font-weight: 400;
+    font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+    color: white;
+}
+
+.home-menu a {
+    color: #6FBEF3;
+}
+.home-menu li a:hover,
+.home-menu li a:focus {
+    background: none;
+    border: none;
+    color: #AECFE5;
+}
+
+
+/* *******BODY******* */
+
+.hero {
+  background-position: 50% 50%;
+  background-image: url('assets/images/background.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  backface-visibility: hidden;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  max-width: 750px;
+  display:block;
+  margin: 0 auto;
+}
+
+.centerForm {
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+.centerForm1 {
+  margin-left: 20%;
+  width: 50%;
+}
+
+form{
+margin-left: 0%;
+width: 100%;
+display: inline-block;
+margin: 0 auto;
+
+}
+
+.override1 {
+    background-color: white;
+/*    background-image: url('assets/images/school.png');*/
+    background-size: 20px;
+    background-position: 10px 13px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    text-indent: 25px;
+
+    width: 445px;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 30px;
+
+}
+
+.override1:focus {
+    border: 3px solid #82ABD8;
+    outline:0;
+}
+
+.override2 {
+    background-color: white;
+    background-image: url('assets/images/work.png');
+    background-size: 20px;
+    background-position: 10px 13px; 
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    text-indent: 25px;
+
+    width: 90%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+
+
+}
+
+.myButton {
+  border: 0px solid;
+  -moz-box-shadow: 0px 0px 0px -3px #2C598B;
+  -webkit-box-shadow: 0px 0px 0px -3px #2C598B;
+  box-shadow: 0px -3px 0px -3px #2C598B;
+  background-color:#4D7BAE;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size:15px;
+  padding:15px 20px;
+  text-decoration:none;
+/*  width: 20%;*/
+  display: inline-block;
+  margin-top: 20px;
+}
+.myButton:hover {
+  background-color:#325379;
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+
+.myButton1 {
+  border: 0px solid;
+  -moz-box-shadow: 0px 0px 0px -3px #2C598B;
+  -webkit-box-shadow: 0px 0px 0px -3px #2C598B;
+  box-shadow: 0px -3px 0px -3px #2C598B;
+  background-color:#4D7BAE;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size:15px;
+  padding:15px;
+  text-decoration:none;
+  width: 90%;
+  display:block;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+.myButton1:hover {
+  background-color:#325379;
+}
+.myButton1:active {
+  position:relative;
+  top:1px;
+}
+
+.first {
+  margin-top: 100px;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.description {
+  text-align: center; 
+  max-width: 500px; 
+  display: block; 
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.simplify {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.spacing {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.spacing1 {
+  margin-top: 50px;
+}
+
+.singleSpacing {
+  margin-top: 0px;
+}
+
+.vs {
+  content:url("assets/images/vs.svg");
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+.blue {
+  background-color: #355B84;
+  width: 100%;
+  box-shadow: inset 0px 0px 60px #2C2C2C;
+  margin-top: 80px;
+}
+
+.dank {
+  content:url("assets/images/see_who.png");
+  width:60%; 
+  display: block; 
+  margin: 0 auto; 
+  margin-bottom: 0; 
+  margin-top: 40px;
+}
+
+.backgroundFooter {
+   background-image: url('assets/images/background.svg');
+   width: 100%;
+   height: auto;
+   display: block;
+   margin-top: 50px;
+}
+
+.backgroundSignUp {
+   background-image: url('assets/images/background.svg');
+   width: 100%;
+   height: auto;
+   display: block;
+   margin-top: 100px;
+   background-repeat: no-repeat;
+}
+
+.backgroundResults {
+   background-image: url('assets/images/resultsbg.svg');
+   width: 100%;
+   height: auto;
+   display: block;
+   margin-top: 100px;
+   background-repeat: repeat;
+}
+
+.myButton2 {
+  border: 0px solid;
+  -moz-box-shadow: 0px 0px 0px -3px #2C598B;
+  -webkit-box-shadow: 0px 0px 0px -3px #2C598B;
+  box-shadow: 0px -3px 0px -3px #2C598B;
+  background-color:#4D7BAE;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size:15px;
+  padding:15px 10px;
+  text-decoration:none;
+  width: 140px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.myButton2:hover {
+  background-color:#325379;
+}
+
+.reveal-if-active {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+input[type="radio"]:checked ~ .reveal-if-active,
+input[type="checkbox"]:checked ~ .reveal-if-active {
+  opacity: 1;
+  max-height: 220px; /* little bit of a magic number :( */
+  overflow: visible;
+}
+
+.woo {
+  width: 75%;
+  max-width: 1000px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.singleresult {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 17px 4px rgba(235,235,235,1);
+  -moz-box-shadow: 0px 0px 17px 4px rgba(235,235,235,1);
+  box-shadow: 0px 0px 17px 4px rgba(235,235,235,1);
+  padding: 15px;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.linkedin {
+  margin-top: 20px;
+}
+
+.myButton3 {
+  border: 0px solid;
+  -moz-box-shadow: 0px 0px 0px -3px #2C598B;
+  -webkit-box-shadow: 0px 0px 0px -3px #2C598B;
+  box-shadow: 0px -3px 0px -3px #2C598B;
+  background-color:#4D7BAE;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border-radius:5px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size:15px;
+  padding:5px 5px;
+  text-decoration:none;
+  width: 90%;
+  height: 45px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.myButton3:hover {
+  background-color:#325379;
+}
+
+.empty {
+  text-align: center;
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 75px;
+  margin-bottom: 100px;
+}
+/* Small screens */
+@media screen and (max-width: 768px)	{
+
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0;
+    color: #4A4E52;
+    line-height: 49px;
+  }
+
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #4A4E52;
+    letter-spacing: .5px;
+    margin-top: 0;
+  }
+
+  p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+    color: #4A4E52;
+    letter-spacing: .25px;
+    line-height: 25px;
+  }
+
+  .hero {
+    background-position: 50% 50%;
+    background-image: url('assets/images/background_mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    backface-visibility: hidden;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header {
+    width: 90%;
+    display:block;
+    margin: 0 auto;
+  }
+
+  
+  form{
+  margin-left: 0%;
+  margin-right:0%;
+  width: 100%;
+  }
+
+  .centerForm1 {
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  .override1 {
+    background-color: white;
+    background-image: url('assets/images/search.png');
+    background-size: 20px;
+    background-position: 10px 13px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    text-indent: 25px;
+
+    width: 100%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 30px;
+  }
+
+  .override2 {
+    background-color: white;
+    background-image: url('assets/images/search.png');
+    background-size: 20px;
+    background-position: 10px 13px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    text-indent: 25px;
+
+    width: 90%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+  .myButton {
+    border: 0px solid;
+    -moz-box-shadow: 0px 0px 0px -3px #2C598B;
+    -webkit-box-shadow: 0px 0px 0px -3px #2C598B;
+    box-shadow: 0px -3px 0px -3px #2C598B;
+    background-color:#4D7BAE;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size:15px;
+    padding:15px 6px;
+    text-decoration:none;
+    width: 100%;
+    display: inline-block;
+    margin-top: 25px;
+    margin-left:20px;
+
+    }
+
+    .first {
+      margin-top: 100px;
+      width: 90%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .spacing {
+      margin-top: 20px;
+    }
+
+    .singleSpacing {
+      margin-top: 60px;
+    }
+
+    .vs {
+      content:url("assets/images/vs_mobile.svg");
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .dank {
+      content:url("assets/images/see_who_mobile.png");
+      width:90%;
+      max-width: 360px; 
+      display: block; 
+      margin: 0 auto; 
+      margin-top: 40px;
+    }
+
+    .empty {
+      text-align: center;
+      width: 90%;
+      display: block;
+      margin: 0 auto;
+      margin-top: 75px;
+      margin-bottom: 100px;
+    }
+  
+}
+
+@media (min-width: 48em) {
+
+    /* We increase the body font size */
+    body {
+        font-size: 16px;
+    }
+    /* We want to give the content area some more padding */
+    .content {
+        padding: 1em;
+    }
+
+    /* We can align the menu header to the left, but float the
+    menu items to the right. */
+    .home-menu {
+        text-align: left;
+    }
+        .home-menu ul {
+            float: right;
+        }
+
+    /* We increase the height of the splash-container */
+/*    .splash-container {
+        height: 500px;
+    }*/
+
+    /* We decrease the width of the .splash, since we have more width
+    to work with */
+    .splash {
+        width: 50%;
+        height: 50%;
+    }
+
+    .splash-head {
+        font-size: 250%;
+    }
+
+
+    /* We remove the border-separator assigned to .l-box-lrg */
+    .l-box-lrg {
+        border: none;
+    }
+
+}
+
